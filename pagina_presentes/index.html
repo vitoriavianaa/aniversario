@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Botão Fugitivo</title>
+  <link rel="stylesheet" href="/pagina_presentes/style.css">
+
+</head>
+<body>
+  <h1>Agora é a hora, escolha seu presente:</h1>
+  <button id="fugitiveButton">alguma peça de computador nova da sua escolha</button> <br>
+  <br> <br> <br> <br> <br> <br> 
+  <button class="botao"><a href="https://pt.aliexpress.com/w/wholesale-ANIME-FIGURE.html?catId=0&initiative_id=SB_20230602124659&SearchText=ANIME+FIGURE&spm=a2g0o.home.1000002.0">anime figure de R$30,00</a></button>  <br><br>
+  <button class="botao"><a href="">skin no lol até R$50,00</a></button>  <br><br> 
+  <button class="botao"><a href="https://www.aliexpress.com/premium/meia-masculina.html?catId=0&initiative_id=SB_20230602124903&SearchText=meia+masculina&spm=a2g0o.productlist.1000002.0">meias</a></button>  <br>
+
+  <script>
+ // Função para obter uma posição aleatória dentro da janela
+ function getRandomPosition() {
+      var windowWidth = window.innerWidth;
+      var windowHeight = window.innerHeight;
+      var buttonWidth = document.getElementById("fugitiveButton").offsetWidth;
+      var buttonHeight = document.getElementById("fugitiveButton").offsetHeight;
+
+      var maxX = windowWidth - buttonWidth;
+      var maxY = windowHeight - buttonHeight;
+
+      var randomX = Math.floor(Math.random() * maxX);
+      var randomY = Math.floor(Math.random() * maxY);
+
+      return [randomX, randomY];
+    }
+
+    // Função para mover o botão para uma posição aleatória
+    function moveButton() {
+      var button = document.getElementById("fugitiveButton");
+      var newPosition = getRandomPosition();
+      button.style.left = newPosition[0] + "px";
+      button.style.top = newPosition[1] + "px";
+    }
+
+    // Adicionar evento de mouseover ao botão
+    document.getElementById("fugitiveButton").addEventListener("mouseover", moveButton);
+  </script>
+</body>
+</html>
